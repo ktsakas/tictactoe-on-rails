@@ -1,7 +1,19 @@
 class Game < ApplicationRecord
+  def create(x, y)
+    if !valid_square(x, y)
+      puts "Invalid square!"
+    end
+
+    first_move = x * 3 + y
+
+    g = Game.new
+    g.moves.push(first_move)
+    g.save
+  end
+
   def play(x, y)
-    if x < 0 or y < 0 or x > 2 or y > 2
-      puts "Move out of bounds!"
+    if !valid_square(x, y)
+      puts "Invalid square!"
     end
 
     move = x * 3 + y
@@ -28,4 +40,9 @@ class Game < ApplicationRecord
 
     board
   end
+
+  private
+    def valid_square(x, y)
+      0 < x and x < 2 and 0 < y and y < 2
+    end
 end
