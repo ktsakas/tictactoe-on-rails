@@ -41,6 +41,33 @@ class Game < ApplicationRecord
     board
   end
 
+  def get_winner
+    board = get_board()
+
+    # Three horizontal
+    board.each do |row|
+      next if row[0] == " "
+      if row.uniq.length == 1 then return row.uniq
+    end
+
+    # Three vertical
+    board.tranpose.each do |col|
+      next if col[0] == " "
+      if col.uniq.length == 1 then return col.uniq
+    end
+
+    # Three diagonal
+    if board[0][0] != " " and 
+       board[0][0] == board[1][1] and 
+       board[1][1] == board[2][2] then return board[0][0]
+
+    if board[2][0] != " " and
+       board[2][0] == board[1][1] and
+       board[1][1] == board[0][2] then return board[2][0]
+
+    return nil
+  end
+
   private
     def valid_square(x, y)
       0 < x and x < 2 and 0 < y and y < 2
