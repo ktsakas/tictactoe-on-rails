@@ -1,5 +1,5 @@
 class Game < ApplicationRecord
-  def create(x, y)
+  def init_game(x, y)
     if !valid_square(x, y)
       puts "Invalid square!"
     end
