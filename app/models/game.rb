@@ -1,4 +1,6 @@
 class Game < ApplicationRecord
+  has_many :moves, dependent: :destroy
+
   def init_game(x, y)
     if !valid_square?(x, y)
       puts "Invalid square!"

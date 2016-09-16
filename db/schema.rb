@@ -22,8 +22,10 @@ ActiveRecord::Schema.define(version: 20160913215835) do
   end
 
   create_table "moves", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "game_id"
+    t.integer  "move"
+    t.datetime "created_at"
+    t.index ["game_id"], name: "index_moves_on_game_id", using: :btree
   end
 
 end
