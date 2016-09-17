@@ -16,14 +16,14 @@ ActiveRecord::Schema.define(version: 20160913215835) do
   enable_extension "plpgsql"
 
   create_table "games", force: :cascade do |t|
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-    t.integer  "moves",      default: [],              array: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "moves", force: :cascade do |t|
     t.integer  "game_id"
-    t.integer  "move"
+    t.integer  "x"
+    t.integer  "y"
     t.datetime "created_at"
     t.index ["game_id"], name: "index_moves_on_game_id", using: :btree
   end
