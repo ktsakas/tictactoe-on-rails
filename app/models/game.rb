@@ -18,9 +18,6 @@ class Game < ApplicationRecord
       puts "Invalid square!"
     end
 
-    move = x * 3 + y
-
-    game = Game.find_by(id: 1)
     if game.moves.include?(move)
       puts "Square (#{x}, #{y}) is filled"
     end
@@ -38,6 +35,10 @@ class Game < ApplicationRecord
     end
 
     board
+  end
+
+  def has_winner
+    return self.get_winnner
   end
 
   def get_winner

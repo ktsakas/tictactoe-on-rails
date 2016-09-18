@@ -1,9 +1,27 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# Unfinished game
+unfinished:
+  id: 1
 
-one:
-  id: 
-  moves: 
+# Player X wins game with three in second row
+x_win_col2:
+  id: 2
 
-two:
-  id: 
-  moves: 
+# Player O wins game with three in first column
+o_win_col1:
+  id: 3
+
+# Player X wins game with three in third row
+x_win_row3:
+  id: 4
+
+# Game is drawn
+drawn:
+  id: 5
+
+# Player X wins with three diagonally
+x_win_diag:
+  id: 6
+
+# Player O wins with three diagonally
+o_win_diag:
+  id: 7
