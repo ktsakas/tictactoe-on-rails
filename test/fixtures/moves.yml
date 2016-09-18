@@ -12,6 +12,7 @@ g1_2:
   y: 0
   game_id: 1
 
+
 # Player X wins game with three in second row
 # X O O
 # X X X
@@ -42,6 +43,190 @@ g2_5:
   game_id: 2
 
 g2_6:
+  x: 0
+  y: 2
+  game_id: 2
+
+g2_7:
+  x: 1
+  y: 1
+  game_id: 2
+
+
+# Player O wins game with three in first column
+# O O O
+# X - X
+# X - -
+g3_1:
+  x: 0
+  y: 1
+  game_id: 3
+
+g3_2:
+  x: 1
+  y: 0
+  game_id: 3
+
+g3_3:
+  x: 0
+  y: 2
+  game_id: 3
+
+g3_4:
+  x: 0
+  y: 0
+  game_id: 3
+
+g3_5:
+  x: 2
+  y: 1
+  game_id: 3
+
+g3_6:
+  x: 0
+  y: 2
+  game_id: 3
+
+
+# Player X wins game with three in third row
+# O - -
+# - O -
+# X X X
+g4_1:
+  x: 0
+  y: 2
+  game_id: 4
+
+g4_2:
+  x: 1
+  y: 1
+  game_id: 4
+
+g4_3:
+  x: 1
+  y: 2
+  game_id: 4
+
+g4_4:
+  x: 0
+  y: 0
+  game_id: 4
+
+g4_5:
+  x: 2
+  y: 2
+  game_id: 4
+
+
+# Game is drawn
+# X X O
+# O X X
+# X O O
+g5_1:
+  x: 0
+  y: 0
+  game_id: 5
+
+g5_2:
+  x: 0
+  y: 1
+  game_id: 5
+
+g5_3:
+  x: 1
+  y: 0
+  game_id: 5
+
+g5_4:
   x: 2
   y: 0
-  game_id: 2
+  game_id: 5
+
+g5_5:
+  x: 1
+  y: 1
+  game_id: 5
+
+g5_6:
+  x: 2
+  y: 2
+  game_id: 5
+
+g5_7:
+  x: 2
+  y: 1
+  game_id: 5
+
+g5_8:
+  x: 1
+  y: 2
+  game_id: 5
+
+g5_9:
+  x: 0
+  y: 2
+  game_id: 5
+
+
+# Player X wins with three diagonally
+# X - -
+# O X - 
+# O - X
+g6_1:
+  x: 1
+  y: 1
+  game_id: 6
+
+g6_2:
+  x: 0
+  y: 1
+  game_id: 6
+
+g6_3:
+  x: 2
+  y: 2
+  game_id: 6
+
+g6_3:
+  x: 0
+  y: 2
+  game_id: 6
+
+g6_4:
+  x: 0
+  y: 0
+  game_id: 6
+
+# Player O wins with three diagonally
+# X X O
+# - O X
+# O - -
+g7_1:
+  x: 0
+  y: 0
+  game_id: 7
+
+g7_2:
+  x: 1
+  y: 1
+  game_id: 7
+
+g7_3:
+  x: 1
+  y: 0
+  game_id: 7
+
+g7_4:
+  x: 2
+  y: 0
+  game_id: 7
+
+g7_5:
+  x: 2
+  y: 1
+  game_id: 7
+
+g7_6:
+  x: 0
+  y: 2
+  game_id: 7
