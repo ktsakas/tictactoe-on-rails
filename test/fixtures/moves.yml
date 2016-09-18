@@ -1,16 +1,47 @@
 # Unfinished game moves
-unfinished-1: 
+# X O -
+# - - -
+# - - -
+g1_1: 
   x: 0
   y: 0
   game_id: 1
 
-unfinished-2: 
+g1_2: 
   x: 1
   y: 0
   game_id: 1
 
 # Player X wins game with three in second row
-x_win_col2-1:
-  x: 
-  y: 
+# X O O
+# X X X
+# O - -
+g2_1:
+  x: 0
+  y: 0
+  game_id: 2
+
+g2_2:
+  x: 1
+  y: 0
+  game_id: 2
+
+g2_3:
+  x: 0
+  y: 1
+  game_id: 2
+
+g2_4:
+  x: 0
+  y: 2
+  game_id: 2
+
+g2_5: 
+  x: 1
+  y: 2
+  game_id: 2
+
+g2_6:
+  x: 2
+  y: 0
   game_id: 2

@@ -30,8 +30,8 @@ class Game < ApplicationRecord
     board = Array.new(3){Array.new(3, " ")}
     game = Game.find_by(id: 1)
 
-    game.moves.each do |move|
-      board[ move.x ][ move.y ] = "X"
+    game.moves.each_with_index do |move, i|
+      board[ move.y ][ move.x ] = (i % 2 == 0) ? "X" : "O"
     end
 
     board
