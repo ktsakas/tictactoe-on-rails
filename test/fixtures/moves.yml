@@ -38,13 +38,13 @@ g2_4:
   game_id: 2
 
 g2_5: 
-  x: 1
-  y: 2
+  x: 2
+  y: 1
   game_id: 2
 
 g2_6:
-  x: 0
-  y: 2
+  x: 2
+  y: 0
   game_id: 2
 
 g2_7:
@@ -83,8 +83,8 @@ g3_5:
   game_id: 3
 
 g3_6:
-  x: 0
-  y: 2
+  x: 2
+  y: 0
   game_id: 3
 
 
@@ -187,12 +187,12 @@ g6_3:
   y: 2
   game_id: 6
 
-g6_3:
+g6_4:
   x: 0
   y: 2
   game_id: 6
 
-g6_4:
+g6_5:
   x: 0
   y: 0
   game_id: 6

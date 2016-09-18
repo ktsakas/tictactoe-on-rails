@@ -13,24 +13,10 @@ class Game < ApplicationRecord
     g.save
   end
 
-  def play(x, y)
-    if !valid_square?(x, y)
-      puts "Invalid square!"
-    end
-
-    if game.moves.include?(move)
-      puts "Square (#{x}, #{y}) is filled"
-    end
-
-    game.moves.push(move)
-    game.save
-  end
-
   def get_board
     board = Array.new(3){Array.new(3, " ")}
-    game = Game.find_by(id: 1)
 
-    game.moves.each_with_index do |move, i|
+    self.moves.each_with_index do |move, i|
       board[ move.y ][ move.x ] = (i % 2 == 0) ? "X" : "O"
     end
 
@@ -42,7 +28,7 @@ class Game < ApplicationRecord
   end
 
   def get_winner
-    board = get_board()
+    board = self.get_board()
 
     # Three horizontal
     board.each do |row|
@@ -51,7 +37,7 @@ class Game < ApplicationRecord
     end
 
     # Three vertical
-    board.tranpose.each do |col|
+    board.transpose.each do |col|
       next if col[0] == " "
       if col.uniq.length == 1 then return col.uniq end
     end
