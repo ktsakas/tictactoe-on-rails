@@ -34,10 +34,7 @@ class Game < ApplicationRecord
     game = Game.find_by(id: 1)
 
     game.moves.each do |move|
-      y = move % 3
-      x = (move - y) / 3
-
-      board[x][y] = "X"
+      board[ move.x ][ move.y ] = "X"
     end
 
     board

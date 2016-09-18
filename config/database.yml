@@ -9,7 +9,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: ttt
+  database: ttt-test
   pool: 5
   username: postgres
   password: admin
