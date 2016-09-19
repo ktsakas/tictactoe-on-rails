@@ -33,13 +33,13 @@ class Game < ApplicationRecord
     # Three horizontal
     board.each do |row|
       next if row[0] == " "
-      if row.uniq.length == 1 then return row.uniq end
+      if row.uniq.length == 1 then return row.uniq.first end
     end
 
     # Three vertical
     board.transpose.each do |col|
       next if col[0] == " "
-      if col.uniq.length == 1 then return col.uniq end
+      if col.uniq.length == 1 then return col.uniq.first end
     end
 
     # Three diagonal
