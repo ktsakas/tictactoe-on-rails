@@ -1,18 +1,6 @@
 class Game < ApplicationRecord
   has_many :moves, dependent: :destroy
 
-  def init_game(x, y)
-    if !valid_square?(x, y)
-      puts "Invalid square!"
-    end
-
-    first_move = x * 3 + y
-
-    g = Game.new
-    g.moves.push(first_move)
-    g.save
-  end
-
   def get_board
     board = Array.new(3){Array.new(3, " ")}
 
@@ -23,8 +11,12 @@ class Game < ApplicationRecord
     board
   end
 
-  def has_winner
-    return self.get_winnner
+  def is_finished
+    if self.get_winner != nil or self.moves.count == 9 then
+      return true
+    else
+      return false
+    end
   end
 
   def get_winner

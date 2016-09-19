@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class GameTest < ActiveSupport::TestCase
+  self.use_instantiated_fixtures = true
+
   def assert_2d_array_eq a1, a2
     a1.each_with_index do |row, y|
       row.each_with_index do |elm, x|
