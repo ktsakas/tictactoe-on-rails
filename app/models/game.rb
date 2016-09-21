@@ -11,7 +11,7 @@ class Game < ApplicationRecord
     board
   end
 
-  def is_finished
+  def is_finished?
     if self.get_winner != nil or self.moves.count == 9 then
       return true
     else
@@ -49,13 +49,4 @@ class Game < ApplicationRecord
 
     return nil
   end
-
-  private
-    def valid_square?(x, y)
-      if 0 < x and x < 2 and 0 < y and y < 2
-        return true
-      else 
-        return false
-      end
-    end
 end

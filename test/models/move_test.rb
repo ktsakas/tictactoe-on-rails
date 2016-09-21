@@ -8,7 +8,19 @@ class MoveTest < ActiveSupport::TestCase
   end
 
   test "do not allow invalid moves" do
-    invalid_move = Move.new({ x: 0, y: 0, game_id: @unfinished.id })
-    assert_not invalid_move.save
+    assert_not Move.new({ x: 3, y: 0, game_id: @unfinished.id }).save
+    assert_not Move.new({ x: 0, y: 3, game_id: @unfinished.id }).save
+    assert_not Move.new({ x: -1, y: 0, game_id: @unfinished.id }).save
+    assert_not Move.new({ x: 0, y: -1, game_id: @unfinished.id }).save
+  end
+
+  test "allow valid moves" do
+    assert Move.new({ x: 2, y: 2, game_id: @unfinished.id }).save
+    assert Move.new({ x: 1, y: 1, game_id: @unfinished.id }).save
+  end
+
+  test "cannot play on occupied square" do
+    played_move = Move.new({ x: 0, y: 0, game_id: @unfinished.id })
+    assert_raises(Exception) { played_move.save }
   end
 end

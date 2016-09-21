@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20160913215835) do
     t.integer  "y"
     t.datetime "created_at"
     t.index ["game_id"], name: "index_moves_on_game_id", using: :btree
+    t.index ["x", "y", "game_id"], name: "index_moves_on_x_and_y_and_game_id", unique: true, using: :btree
   end
 
 end

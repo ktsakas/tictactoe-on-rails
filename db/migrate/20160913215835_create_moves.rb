@@ -6,5 +6,7 @@ class CreateMoves < ActiveRecord::Migration[5.0]
       t.column :y, :integer
       t.column :created_at, :datetime
     end
+
+    add_index :moves, [:x, :y, :game_id], :unique => true
   end
 end
