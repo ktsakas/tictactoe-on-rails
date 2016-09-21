@@ -3,10 +3,6 @@ require 'test_helper'
 class MoveTest < ActiveSupport::TestCase
   self.use_instantiated_fixtures = true
 
-  test "only allow moves in unfinished games" do
-    # assert Move.create({ x: 2, y: 2, game_id: @unfinished.id })
-  end
-
   test "do not allow invalid moves" do
     assert_not Move.new({ x: 3, y: 0, game_id: @unfinished.id }).save
     assert_not Move.new({ x: 0, y: 3, game_id: @unfinished.id }).save
@@ -25,7 +21,7 @@ class MoveTest < ActiveSupport::TestCase
   end
 
   test "cannot make move in finished game" do
-    mov_in_ended_game = Move.new({ x: 0, y: 0, game_id: @x_win_row2.id })
+    mov_in_ended_game = Move.new({ x: 2, y: 2, game_id: @x_win_row2.id })
     assert_not mov_in_ended_game.save
   end
 end
