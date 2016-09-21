@@ -53,7 +53,7 @@ g2_7:
   game_id: 2
 
 
-# Player O wins game with three in first column
+# Player O wins game with three in first row
 # O O O
 # X - X
 # X - -
@@ -89,12 +89,12 @@ g3_6:
 
 
 # Player X wins game with three in third row
-# O - -
-# - O -
-# X X X
+# O - X
+# - O X
+# - - X
 g4_1:
-  x: 0
-  y: 2
+  x: 2
+  y: 0
   game_id: 4
 
 g4_2:
@@ -103,8 +103,8 @@ g4_2:
   game_id: 4
 
 g4_3:
-  x: 1
-  y: 2
+  x: 2
+  y: 1
   game_id: 4
 
 g4_4:

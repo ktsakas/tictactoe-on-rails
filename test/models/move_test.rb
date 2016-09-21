@@ -23,4 +23,9 @@ class MoveTest < ActiveSupport::TestCase
     played_move = Move.new({ x: 0, y: 0, game_id: @unfinished.id })
     assert_raises(Exception) { played_move.save }
   end
+
+  test "cannot make move in finished game" do
+    mov_in_ended_game = Move.new({ x: 0, y: 0, game_id: @x_win_row2.id })
+    assert_not mov_in_ended_game.save
+  end
 end

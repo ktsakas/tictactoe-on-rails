@@ -35,9 +35,9 @@ class GameTest < ActiveSupport::TestCase
     ], Game.find_by(id: 3).get_board()
 
     assert_2d_array_eq [
-      [ "O", " ", " " ],
-      [ " ", "O", " " ],
-      [ "X", "X", "X" ]
+      [ "O", " ", "X" ],
+      [ " ", "O", "X" ],
+      [ " ", " ", "X" ]
     ], Game.find_by(id: 4).get_board()
 
     assert_2d_array_eq [

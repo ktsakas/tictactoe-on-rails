@@ -3,15 +3,15 @@ unfinished:
   id: 1
 
 # Player X wins game with three in second row
-x_win_col2:
+x_win_row2:
   id: 2
 
 # Player O wins game with three in first column
-o_win_col1:
+o_win_row1:
   id: 3
 
 # Player X wins game with three in third row
-x_win_row3:
+x_win_col3:
   id: 4
 
 # Game is drawn
